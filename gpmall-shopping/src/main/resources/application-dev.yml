@@ -1,0 +1,24 @@
+
+dubbo:
+  application:
+    name: gpmall-shopping
+    owner: Mic
+  registry:
+    address: zookeeper://zk.gpmall.com:2181
+    check: true
+    group: dubbo-dev
+    simplified: true
+  provider:
+    check: false
+  consumer:
+    check: false
+  metadata-report:
+    address: zookeeper://zk.gpmall.com:2181
+    retry-times: 30
+    cycle-report: false
+    group: dubbo-dev
+  scan:
+    base-packages: com.gpmall.shopping
+
+swagger:
+  enable: true
